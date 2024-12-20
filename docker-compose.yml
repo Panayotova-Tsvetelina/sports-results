@@ -1,0 +1,37 @@
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: sports_results_app
+        ports:
+            - "8000:80"  # Map container port 80 to host port 8000
+        volumes:
+            - .:/var/www/html  # Mount current directory to /var/www/html in container
+        depends_on:
+            - db
+        networks:
+            - app-network
+
+    db:
+        image: mysql:8.0
+        container_name: sports_results_db
+        environment:
+            MYSQL_ROOT_PASSWORD: rootpassword  # Root password for MySQL
+            MYSQL_DATABASE: sports_results  # Database name
+            MYSQL_USER: user
+            MYSQL_PASSWORD: password  # MySQL user password
+        ports:
+            - "3306:3306"  # Expose MySQL port
+        volumes:
+            - db_data:/var/lib/mysql  # Persist MySQL data in a volume
+        networks:
+            - app-network
+
+volumes:
+    db_data:  # Define the volume for MySQL
+
+networks:
+    app-network:  # Define a custom network for communication between services
+        driver: bridge
+
