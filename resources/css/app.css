@@ -1,0 +1,87 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.loading, .alert {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.tournament-section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.tournament-name {
+    font-size: 24px;
+    color: #007BFF;
+}
+
+.season-section {
+    margin-top: 20px;
+}
+
+.season-name {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.matches {
+    display: flex;
+    flex-direction: column;
+}
+
+.match-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.match-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Ensure it stretches to the full width */
+}
+
+.team-name {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center; /* Center-align for team names */
+    flex: 1; /* Allow team name to take available space */
+}
+
+.team1 {
+    text-align: left; /* Left-align for team 1 */
+}
+
+.team2 {
+    text-align: right; /* Right-align for team 2 */
+}
+
+.score {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007BFF;
+    text-align: center; /* Center the score between teams */
+    flex: 0 0 auto; /* Prevent stretching of the score */
+}
