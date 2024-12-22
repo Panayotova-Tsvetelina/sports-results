@@ -34,4 +34,3 @@ volumes:
 networks:
     app-network:  # Define a custom network for communication between services
         driver: bridge
-
